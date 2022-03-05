@@ -1,5 +1,6 @@
 from discord.ext import commands
 import asyncio
+import os
 
 bot = commands.Bot(command_prefix="/")
 
@@ -51,5 +52,5 @@ async def clear_reminders(ctx, *args):
     for t in tasks:
         t.cancel()
 
-bot.run('OTQ5NjE1MDM0NzE4Mzg0MTY4.YiM76w.EaW8XMSzjVllKTlUrpZNTYcGBaQ')
+bot.run(os.getenv('TOKEN'))
 
